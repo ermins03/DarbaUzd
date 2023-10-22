@@ -1,0 +1,104 @@
+﻿@model UzdevumsBackend.Models.Dats
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Dats</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Project" class="control-label"></label>
+                <input asp-for="Project" class="form-control" />
+                <span asp-validation-for="Project" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trip" class="control-label"></label>
+                <input asp-for="Trip" class="form-control" />
+                <span asp-validation-for="Trip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longitude" class="control-label"></label>
+                <input asp-for="Longitude" class="form-control" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" class="form-control" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTime" class="control-label"></label>
+                <input asp-for="DateTime" class="form-control" />
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Station" class="control-label"></label>
+                <input asp-for="Station" class="form-control" />
+                <span asp-validation-for="Station" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BottDepthM" class="control-label"></label>
+                <input asp-for="BottDepthM" class="form-control" />
+                <span asp-validation-for="BottDepthM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SampleId" class="control-label"></label>
+                <input asp-for="SampleId" class="form-control" />
+                <span asp-validation-for="SampleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Parameter" class="control-label"></label>
+                <input asp-for="Parameter" class="form-control" />
+                <span asp-validation-for="Parameter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tissue" class="control-label"></label>
+                <input asp-for="Tissue" class="form-control" />
+                <span asp-validation-for="Tissue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Species" class="control-label"></label>
+                <input asp-for="Species" class="form-control" />
+                <span asp-validation-for="Species" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Individuals" class="control-label"></label>
+                <input asp-for="Individuals" class="form-control" />
+                <span asp-validation-for="Individuals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Value" class="control-label"></label>
+                <input asp-for="Value" class="form-control" />
+                <span asp-validation-for="Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Units" class="control-label"></label>
+                <input asp-for="Units" class="form-control" />
+                <span asp-validation-for="Units" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quality" class="control-label"></label>
+                <input asp-for="Quality" class="form-control" />
+                <span asp-validation-for="Quality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
